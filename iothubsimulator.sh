@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/bash
 FREQ=$3
 if [ -z "$FREQ" ]
 then

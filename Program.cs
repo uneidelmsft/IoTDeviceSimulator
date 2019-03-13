@@ -18,8 +18,8 @@ namespace IoTDeviceSimulator{    public class Program    {
         public string payload { get; }
         [Option("-transportType", Description = "Transport Type")]        
         public string transportType { get; set; } = "mqtt";        
-        [Option(Description = "No. of Repeat")]        
-        public int Count { get; set; } = 1;
+        [Option("-count",Description = "No. of Repeat")]        
+        public int count { get; set; } = 1;
 
 
         #endregion
@@ -31,7 +31,7 @@ namespace IoTDeviceSimulator{    public class Program    {
         {
             DeviceClient deviceClient = DeviceClient.CreateFromConnectionString(s_deviceConnectionString, TransportProtocol);
             var sample = new MessageBroker(deviceClient);
-            sample.RunSampleAsync(payload, Count).GetAwaiter().GetResult();            
+            sample.RunSampleAsync(payload, count).GetAwaiter().GetResult();            
             Console.WriteLine("Done.\n");
         }
         private TransportType TransportProtocol        

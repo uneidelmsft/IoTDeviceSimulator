@@ -8,7 +8,7 @@ Please use the following command to simulate Azure IoT Device Telemetry Send:
       COPY JSON to URL File
 2)  Get your Device Connection String
 
-´´´
+
 curl -L https://aka.ms/iothubsimulator.sh | bash -s  "HostName=[YOURHUB].azure-devices.net;DeviceId=SingleDevice;SharedAccessKey=[YOURKEY]" "http://www.json-generator.com/api/json/get/bVvfhEQOoO?indent=2" 1
 
 

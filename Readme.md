@@ -1,13 +1,14 @@
-## IoTDevice Simulator
+## IoT Device Simulator
 
 Please use the following command to simulate Azure IoT Device Telemetry Send: 
 
-1)Create your custom Payload:
-  Go To https://www.json-generator.com/ and build your Payload  (Please choose a High Repeat number)
-  Press Generate and Upload JSON to Server
-  COPY JSON to URL File
-2)Get your Device Connection String
+1)  Create your custom Payload:
+      Go To https://www.json-generator.com/ and build your Payload  (Please choose a High Repeat number)
+      Press Generate and Upload JSON to Server
+      COPY JSON to URL File
+2)  Get your Device Connection String
 
+´´´
 curl -L https://aka.ms/iothubsimulator.sh | bash -s  "HostName=[YOURHUB].azure-devices.net;DeviceId=SingleDevice;SharedAccessKey=[YOURKEY]" "http://www.json-generator.com/api/json/get/bVvfhEQOoO?indent=2" 1
 
 
